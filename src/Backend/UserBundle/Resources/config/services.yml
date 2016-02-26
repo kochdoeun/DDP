@@ -1,0 +1,4 @@
+services:
+#    frontend_news.example:
+#        class: Frontend\NewsBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

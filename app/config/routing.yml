@@ -1,3 +1,11 @@
+frontend_news:
+    resource: "@FrontendNewsBundle/Controller/"
+    type:     annotation
+
+backend_user:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+
 app:
-    resource: "@AppBundle/Controller/"
+    resource: "@HomeBundle/Controller/"
     type:     annotation

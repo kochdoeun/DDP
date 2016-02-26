@@ -21,7 +21,9 @@ class AppKernel extends Kernel
             new JMS\TranslationBundle\JMSTranslationBundle(),
             new SC\DatetimepickerBundle\SCDatetimepickerBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
-            new AppBundle\AppBundle(),
+            new HomeBundle\HomeBundle(),
+            new Frontend\NewsBundle\FrontendNewsBundle(),
+            new Backend\UserBundle\UserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
