@@ -1,5 +1,99 @@
-{% extends 'frontend_layout.html.twig' %}
+{% extends '::frontend_layout.html.twig' %}
+{% set pageTitle = 'Page' %}
 
-{% block content %}
-    Home Page
+{% block frontend_layout %}
+    <div id="profile-show" data-for-test-name="showProfile">
+        {% include ':navigation/frontend:header.html.twig' %}
+        {% block header_menu %}
+            <div class="navigation-bar navigation-bar--android bg-secondary">
+                <div class="navigation-bar__left">
+                    <span class="toolbar-button--quiet navigation-bar__line-height">
+                        <i class="fa fa-angle-left icon-primary fg-secondary profile-arrow-left"></i>
+                    </span>
+                </div>
+
+                <div class="navigation-bar__center fg-primary">
+                    {{ pageTitle|trans }}
+                </div>
+            </div>
+        {% endblock %}
+        <ul class="list">
+            <li class="list__header"></li>
+        </ul>
+        <div>
+            <a href="">
+                <ul class="list">
+                    <li class="list__item list__item--chevron">
+	                    <table>
+	                        <tr>
+	                            <td></td>
+	                            <td></td>
+	                        </tr>
+	                    </table>
+                    </li>
+                </ul>
+            </a>
+        </div>
+        <ul class="list">
+            <li class="list__header"></li>
+        </ul>
+        <div>
+            <ul class="list profile">
+                <li class="list__item list__item--chevron">
+                    <a href="">
+                        <div>
+                            <i class="fa fa-credit-card"></i>
+                            Page 1
+                        </div>
+                    </a>
+                </li>
+                <li class="list__item list__item--chevron">
+                    <a href="">
+                        <div>
+                            <i class="fa fa-automobile"></i>
+                            Page 2
+                        </div>
+                    </a>
+                </li>
+                <li class="list__item list__item--chevron">
+                    <div>
+                        <i class="fa fa-reorder"></i>
+                        Page 3
+                    </div>
+                </li>
+                <li class="list__item list__item--chevron">
+                    <div>
+                        <i class="fa fa-bank"></i>
+                        Page 4
+                    </div>
+                </li>
+                <li class="list__item list__item--chevron">
+                    <div>
+                        <i class="fa fa-map-marker"></i>
+                        Page 5
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ul class="list">
+            <li class="list__header"></li>
+        </ul>
+        <div>
+            <ul class="list setting">
+                <li class="list__item list__item--chevron">
+                    <div>
+                        <i class="fa fa-cog"></i>
+                        Page 6
+                    </div>
+                </li>
+            </ul>
+        </div>
+        {% include ':navigation/frontend:footer.html.twig' %}
+    </div>
 {% endblock %}
+
+
+
+
+
+

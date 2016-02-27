@@ -12,33 +12,30 @@
             "@bootstrap_min_css"
             "@onsenui_css"
             "@onsen_css_components_css"
+            "@font_awesome_css"
         %}
             <link rel="stylesheet" href="{{ asset_url }}"/>
         {% endstylesheets %}
+
     {% endblock %}
     {% block local_stylesheets %}{% endblock %}
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body>
+    {% block frontend_layout %}
 
+    {% endblock %}
 
-{% block content %}
+    {% javascripts
+        "@onsenui_js"
+        "@jquery"
+        "@bootstrap_min_js"
+    %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
 
-{% endblock %}
-
-{% javascripts
-    "@jquery"
-%}
-    <script src="{{ asset_url }}"></script>
-{% endjavascripts %}
-
-{% block javascripts %}{% endblock %}
-{% block local_javascripts %}{% endblock %}
+    {% block javascripts %}{% endblock %}
+    {% block local_javascripts %}{% endblock %}
 </body>
+
 </html>
