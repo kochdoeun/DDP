@@ -1,0 +1,36 @@
+<nav
+    class="navbar navbar-default navbar-static-top"
+    role="navigation"
+>
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ path('homepage') }}">
+            HOME PAGE
+        </a>
+    </div>
+
+    {% if isBreadcrumb is defined %}
+        <div class="navbar-header nav-breadcrumb">
+            {% for routeName, label in breadcrumbData %}
+                {% if loop.last %}
+                    {{ label }}
+                {% else %}
+                    <a href="{{ path(routeName) }}">{{ label }}</a> /
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <ul class="nav navbar-top-links navbar-right">
+
+        {% include ':navigation/backend:language_menu.html.twig' %}
+        {% include ':navigation/backend:user_menu.html.twig' %}
+
+    </ul>
+</nav>

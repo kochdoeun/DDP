@@ -2,7 +2,6 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
-    - { resource: "@FrontendNewsBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -44,6 +43,8 @@ assetic:
         - HomeBundle
         - FrontendNewsBundle
         - UserBundle
+        - AdminBundle
+
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -55,9 +56,54 @@ assetic:
         jquery:
             inputs: '%kernel.root_dir%/../vendor/components/jquery/jquery.min.js'
             output: 'js/jquery.min.js'
+        sb_admin_css:
+            inputs: '%kernel.root_dir%/Resources/css/sb-admin-2.css'
+            output: 'css/sb-admin-2.css'
+        sb_admin_js:
+            inputs: '%kernel.root_dir%/Resources/js/sb-admin-2.js'
+            output: 'js/sb-admin-2.js'
+        metis_menus_css:
+            inputs: '%kernel.root_dir%/../vendor/onokumus/metismenu/dist/metisMenu.min.css'
+            output: 'css/metisMenu.min.css'
+        metis_menus_js:
+            inputs: '%kernel.root_dir%/../vendor/onokumus/metismenu/dist/metisMenu.min.js'
+            output: 'js/metisMenu.min.js'
         bootstrap_min_css:
             inputs: '%kernel.root_dir%/../vendor/twbs/bootstrap/dist/css/bootstrap.min.css'
             output: 'css/bootstrap.min.css'
+        bootstrap_min_js:
+            inputs: '%kernel.root_dir%/../vendor/twbs/bootstrap/dist/js/bootstrap.min.js'
+            output: 'js/bootstrap.min.js'
+        glyphicon_woff2:
+            inputs: '%kernel.root_dir%/../vendor/twbs/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2'
+            output: 'fonts/glyphicons-halflings-regular.woff2'
+        glyphicon_woff:
+            inputs: '%kernel.root_dir%/../vendor/twbs/bootstrap/dist/fonts/glyphicons-halflings-regular.woff'
+            output: 'fonts/glyphicons-halflings-regular.woff'
+        font_awesome_css:
+            inputs: '%kernel.root_dir%/../vendor/fortawesome/font-awesome/css/font-awesome.min.css'
+            output: 'css/font-awesome.min.css'
+        font_awesome_woff2:
+            inputs: '%kernel.root_dir%/../vendor/fortawesome/font-awesome/fonts/fontawesome-webfont.woff2'
+            output: 'fonts/fontawesome-webfont.woff2'
+        font_awesome_woff:
+            inputs: '%kernel.root_dir%/../vendor/fortawesome/font-awesome/fonts/fontawesome-webfont.woff'
+            output: 'fonts/fontawesome-webfont.woff'
+        flag_icon_css:
+            inputs: '%kernel.root_dir%/../vendor/components/flag-icon-css/css/flag-icon.min.css'
+            output: 'css/flag-icon.min.css'
+        flag_icon_svg_cn:
+            inputs: '%kernel.root_dir%/../vendor/components/flag-icon-css/flags/4x3/cn.svg'
+            output: 'flags/4x3/cn.svg'
+        flag_icon_svg_fr:
+            inputs: '%kernel.root_dir%/../vendor/components/flag-icon-css/flags/4x3/fr.svg'
+            output: 'flags/4x3/fr.svg'
+        flag_icon_svg_kh:
+            inputs: '%kernel.root_dir%/../vendor/components/flag-icon-css/flags/4x3/kh.svg'
+            output: 'flags/4x3/kh.svg'
+        flag_icon_svg_en:
+            inputs: '%kernel.root_dir%/../vendor/components/flag-icon-css/flags/4x3/gb.svg'
+            output: 'flags/4x3/gb.svg'
         onsenui_css:
             inputs: '%kernel.root_dir%/../bower_components/onsenui/css/onsenui.css'
             output: 'css/onsenui.css'
@@ -67,7 +113,9 @@ assetic:
         onsenui_js:
             inputs: '%kernel.root_dir%/../bower_components/onsenui/js/onsenui.min.js'
             output: 'js/libs/onsenui.js'
-
+        admin_backend_css:
+            inputs: '%kernel.root_dir%/Resources/css/admin_backend.css'
+            output: 'css/admin_backend.css'
 # Doctrine Configuration
 doctrine:
     dbal:

@@ -1,3 +1,7 @@
+backend_admin:
+    resource: "@AdminBundle/Controller/"
+    type:  annotation
+
 frontend_news:
     resource: "@FrontendNewsBundle/Controller/"
     type:     annotation

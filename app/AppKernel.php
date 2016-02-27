@@ -24,6 +24,7 @@ class AppKernel extends Kernel
             new HomeBundle\HomeBundle(),
             new Frontend\NewsBundle\FrontendNewsBundle(),
             new Backend\UserBundle\UserBundle(),
+            new Backend\AdminBundle\AdminBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
