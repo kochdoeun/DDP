@@ -8,10 +8,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class NewsController extends Controller
 {
     /**
-     * @Route("/news")
+     * @Route("/home")
      */
     public function indexAction()
     {
-        return $this->render('FrontendNewsBundle:Default:index.html.twig');
+        return $this->render('FrontendNewsBundle:Home:index.html.twig');
     }
 }

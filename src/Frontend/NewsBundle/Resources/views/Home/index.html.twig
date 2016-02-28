@@ -1,0 +1,16 @@
+{% extends '::frontend_layout.html.twig' %}
+
+{% set pageTitle = 'Page' %}
+
+{% block local_stylesheets %}
+    {% stylesheets filter="cssrewrite"
+        "@FrontendNewsBundle/Resources/public/css/news.css"
+    %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+
+{% block frontend_layout %}
+   {% include ':navigation/frontend:header.html.twig' %}
+   {% include ':navigation/frontend:footer.html.twig' %}
+{% endblock %}
